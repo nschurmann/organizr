@@ -1,8 +1,9 @@
+
 from PIL import Image # python3 -m pip install Pillow
 
 import os
 
-downloadsFolder = "/Users/nicolasschurmann/Downloads/"
+downloadsFolder = "/home/naren/Descargas/"
 
 if __name__ == "__main__":
     for filename in os.listdir(downloadsFolder):
@@ -11,3 +12,4 @@ if __name__ == "__main__":
         if extension in [".jpg", ".jpeg", ".png"]:
             picture = Image.open(downloadsFolder + filename)
             picture.save(downloadsFolder + "compressed_"+filename, optimize=True, quality=60)
+            
